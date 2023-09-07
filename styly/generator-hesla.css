@@ -1,0 +1,130 @@
+:root {
+  --gradient: linear-gradient(131deg, #474bff 5%, #bc48ff 100%);
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #ddd;
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 25s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.container {
+  padding: 25px 30px;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+}
+
+h2 {
+  text-align: center;
+  padding: 15px;
+}
+
+.moznosti {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.vysledek-container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
+
+.vysledek-container #vysledek {
+  margin-left: 4px;
+  word-wrap: break-word;
+  max-width: clac(100% - 40px);
+}
+
+.vysledek-container #kopirovat {
+  height: 30px;
+  width: auto;
+  margin: 0 5px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.vysledek-container #kopirovat:hover {
+  filter: brightness(90%);
+}
+
+.copy-img {
+  margin: 2px 2px;
+}
+
+.generovat-button {
+  height: 40px;
+  width: auto;
+  margin-top: 5px;
+  padding: 0 55px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.generovat-button:hover {
+  filter: brightness(90%);
+}
+
+#delka {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  width: 32px;
+}
+
+.delka-label {
+  margin-top: 4px;
+}
+
+.credits-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.credits-container a {
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.credits-container a:hover {
+  transform: scale(1.2);
+}
