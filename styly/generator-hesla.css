@@ -54,6 +54,12 @@ h2 {
   padding: 3px;
 }
 
+#upper,
+#sym,
+#num {
+  cursor: pointer;
+}
+
 .vysledek-container {
   height: 50px;
   width: 100%;
