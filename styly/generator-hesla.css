@@ -74,7 +74,7 @@ h2 {
 .vysledek-container #vysledek {
   margin-left: 4px;
   word-wrap: break-word;
-  max-width: clac(100% - 40px);
+  max-width: calc(100% - 40px);
 }
 
 .vysledek-container #kopirovat {
